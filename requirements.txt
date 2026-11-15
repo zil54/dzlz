@@ -1,0 +1,5 @@
+countryinfo
+geopandas
+matplotlib
+pillow
+psycopg2-binary
