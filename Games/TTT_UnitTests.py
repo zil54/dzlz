@@ -6,6 +6,13 @@ class TestTicTacToe(unittest.TestCase):
     def setUp(self):
         """Initialize a fresh game instance before each test."""
         self.game = TicTacToe()
+        self.addCleanup(self.game.destroy)
+
+    def test_initial_window_and_board(self):
+        self.assertEqual(self.game.title(), "Tic Tac Toe")
+        self.assertEqual(self.game.current_player, "O")
+        self.assertEqual(self.game.status_label.cget("text"), "Player O's turn")
+        self.assertTrue(all(button.master is self.game for row in self.game.buttons for button in row))
 
     def test_empty_board_no_winner(self):
         """Verify that an empty board has no winner."""

@@ -1,5 +1,13 @@
 countryinfo
 geopandas
 matplotlib
-pillow
+numpy
+pandas
+Pillow
 psycopg2-binary
+pygame-ce
+pytest
+requests
+selenium
+shapely
+splinter
